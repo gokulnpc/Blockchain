@@ -6,10 +6,84 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favouriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "createSimpleStorageContract",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavouriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favouriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -67,6 +141,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favouriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -97,19 +184,19 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x8bc2e2c723abaf73797375ea059b6b7587a4ee4589bc56b4669c10872368e4e3",
+			"keccak256": "0x3afbef6c58c91282a75e16a1543f6ef9c46c853d0e9399e17d7ab983b450410b",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cabdd444733bb62dfcf150ea5d42f029f390edb4b8ec6ade33192b03f09f6d07",
-				"dweb:/ipfs/QmYGVzwLYjqHat465vT6ftPS22j7211o2EJjYdaE7n5Vk4"
+				"bzz-raw://8b151bd4652f85d7ce4ec188a1830fb8b376eb4773aeb6f415c3811d523a45b4",
+				"dweb:/ipfs/QmcevsAFAgxbXQcBmqK1NLNowHNa3aNhpBUpw6BNUG6ZFs"
 			]
 		},
 		"contracts/StorageFactory.sol": {
-			"keccak256": "0x2fd1cc45e8fd62d9c340e02de6eee65b469009f1884edb4900e7aa0bcaa07475",
+			"keccak256": "0x1ba2b7b5608afe08d49c16230d9e4087ee54172e613a40fcde0b15adbb055db6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://170bf5c8cdf63883e493ac56b4f04f8f78f439a6f17ddbae8c6d7305bdf3b0d0",
-				"dweb:/ipfs/Qma579Jxdn7is8S48iwCtZP6MeMFTVhwsvxssMsnWHDpM6"
+				"bzz-raw://23703dbaf93e5f6902497e12c994cd185297022a78365942c2f0abf2a8c25583",
+				"dweb:/ipfs/QmXZHHQwojb1Fwr5gBHuYvgxv9LriW3aYFF72twSRJcDLx"
 			]
 		}
 	},

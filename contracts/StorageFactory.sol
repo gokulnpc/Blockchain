@@ -4,7 +4,9 @@ pragma solidity >=0.4.22 <0.9.0;
 //importing Simple storage contract
 import "./SimpleStorage.sol";
  
-contract StorageFactory
+//Inheritance
+//now StorageFactory contract will have all of the variables and functions of StorageContract
+contract StorageFactory is SimpleStorage
 {
     SimpleStorage[] public simpleStorageArray;
     function createSimpleStorageContract() public

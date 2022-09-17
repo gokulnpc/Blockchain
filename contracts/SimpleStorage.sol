@@ -33,8 +33,4 @@ contract SimpleStorage
         people.push(People(_favouriteNumber,_name));
         nameToFavouriteNumber[_name] = _favouriteNumber;
     }
-
-    
-
-
 }

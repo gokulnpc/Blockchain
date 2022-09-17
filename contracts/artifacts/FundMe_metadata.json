@@ -8,59 +8,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_favouriteNumber",
-						"type": "uint256"
-					}
-				],
-				"name": "addPerson",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
-				"name": "nameToFavouriteNumber",
+				"name": "addressToAmountFunded",
 				"outputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "people",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "favouriteNumber",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -68,7 +26,20 @@
 			},
 			{
 				"inputs": [],
-				"name": "retrieve",
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ethAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "getConversionRate",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -80,16 +51,29 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "getPrice",
+				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "_favouriteNumber",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "store",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -106,7 +90,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleStorage.sol": "SimpleStorage"
+			"contracts/FundMe.sol": "FundMe"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -120,12 +104,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x3afbef6c58c91282a75e16a1543f6ef9c46c853d0e9399e17d7ab983b450410b",
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0xf2b6c9adb3552254df1445b73563cf014434ff5e78663e9b961b6c059506ceb5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c1f59e0c7334c22fb54288728fc32546bdc9c8133d6db0d60223e3c28f52120",
+				"dweb:/ipfs/QmeuxawUVBhMWQJXaEhhnubCTc4Jwn5wYK8gbhq6NjrpfG"
+			]
+		},
+		"contracts/FundMe.sol": {
+			"keccak256": "0x96cf5477c9d5c683782b769322d0d382723f54469fb20ed0cf6b8ee478e1287e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8b151bd4652f85d7ce4ec188a1830fb8b376eb4773aeb6f415c3811d523a45b4",
-				"dweb:/ipfs/QmcevsAFAgxbXQcBmqK1NLNowHNa3aNhpBUpw6BNUG6ZFs"
+				"bzz-raw://e8a5504086f73d4a803be0a2d6589a326856e377a307010a28b1da3b1345bd4c",
+				"dweb:/ipfs/QmTXuY2T1wCPBQPV5Epz3kHUMtAYGYsU9xJNm92MKTuX3c"
 			]
 		}
 	},
